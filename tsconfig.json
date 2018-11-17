@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng2-actor": [
+        "dist/ng2-actor"
+      ],
+      "ng2-actor/*": [
+        "dist/ng2-actor/*"
+      ]
+    }
   }
 }

@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ng2-actor": {
+      "root": "projects/ng2-actor",
+      "sourceRoot": "projects/ng2-actor/src",
+      "projectType": "library",
+      "prefix": "actor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng2-actor/tsconfig.lib.json",
+            "project": "projects/ng2-actor/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng2-actor/src/test.ts",
+            "tsConfig": "projects/ng2-actor/tsconfig.spec.json",
+            "karmaConfig": "projects/ng2-actor/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng2-actor/tsconfig.lib.json",
+              "projects/ng2-actor/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng2-actor-spec"
