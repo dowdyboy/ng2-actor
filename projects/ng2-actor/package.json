@@ -1,10 +1,11 @@
 {
   "name": "ng2-actor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description":"an actor model implement for angular2 or greater",
   "keywords":["angular","actor"],
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
-  }
+  },
+  "license":"MIT"
 }
