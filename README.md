@@ -100,6 +100,28 @@ It is so easy?Right?
 - `pause(name:string):void` : let this actor switch to background mode by name
 - `stop(name:string):void` : remove the actor from this actor system by name
 
+### PRELOAD_ACTORS [InjectionToken]
+
+- the preload actor defined. You can provide it in your app module to build preload actor by giving name array. For example:
+
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    Ng2ActorModule
+  ],
+  providers: [
+    {provide:PRELOAD_ACTORS,useValue:['a','b']}
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
 ## About
 
 [dowdyboy](http://dowdyboy.com)

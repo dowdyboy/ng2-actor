@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable, InjectionToken} from '@angular/core';
 
 export class Actor {
 
@@ -51,12 +51,18 @@ export class Actor {
 
 }
 
+export const PRELOAD_ACTORS = new InjectionToken<string[]>("preload_actors")
+
 @Injectable({
   providedIn: 'root'
 })
 export class ActorService {
 
   actors:Actor[] = []
+
+  constructor(@Inject(PRELOAD_ACTORS) preloadActors:string[]){
+    if(preloadActors) preloadActors.forEach(name=>this.create(name))
+  }
 
   create(name:string):Actor{
     let actor = new Actor(name,this)

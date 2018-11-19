@@ -1,6 +1,6 @@
 {
   "name": "ng2-actor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description":"an actor model implement for angular2 or greater",
   "keywords":["angular","actor"],
   "peerDependencies": {
